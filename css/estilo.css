@@ -1,1 +1,10 @@
-
+.menu{
+    display: grid;              /*grid */
+    place-items: center;        /* centro horizontal y vertical */
+}
+.contenedor{
+    display: grid; /*grid*/
+    grid-template-columns:  repeat(3, 1fr); /*3 columnas iguales*/
+    gap: 10px;
+    background-color: rgb(255, 19, 19);
+}
