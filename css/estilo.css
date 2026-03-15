@@ -68,6 +68,16 @@ footer {
 
 /* Responsive - en pantallas pequeñas */
 @media (max-width: 600px) {
+    .contenedor {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .column {
+        text-align: center;
+        flex: none;
+    }
+
     .contacto {
         flex-direction: row;
         justify-content: center;
