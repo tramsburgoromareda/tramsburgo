@@ -81,6 +81,6 @@ footer {
     .contacto {
         flex-direction: row;
         justify-content: center;
-        gap: 15px;
+        gap: 2px;
     }
 }
