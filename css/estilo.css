@@ -1,10 +1,34 @@
-.menu{
-    display: grid;              /*grid */
-    place-items: center;        /* centro horizontal y vertical */
+body {
+    margin: 0;
 }
-.contenedor{
-    display: grid; /*grid*/
-    grid-template-columns:  repeat(3, 1fr); /*3 columnas iguales*/
-    gap: 10px;
-    background-color: rgb(255, 19, 19);
+
+.menu {
+    display: grid;
+    place-items: center;
+}
+
+footer {
+    margin-top: 10px;
+    background: #3b2a1f;
+    color: #f5e6c8;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.column {
+    text-align: center;
+}
+
+.column>h1 {
+    font-family: 'UnifrakturCook', cursive;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.logo {
+    display: grid;
+    align-items: center;
 }
