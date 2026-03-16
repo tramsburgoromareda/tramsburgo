@@ -4,6 +4,7 @@ body {
 
 .menu {
     display: grid;
+    grid-column: repeat(6,1fr);
     place-items: center;
     height: 10%;
 }
@@ -13,57 +14,6 @@ body {
     height: 100%;
     object-fit: fill;
 }
-/*
-footer {
-    position: static;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: #3b2a1f;
-    color: #f5e6c8;
-    padding: 15px 0;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3);
-    font-family: Arial, sans-serif;
-}
-
-.contenedor {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-}
-
-.column {
-    flex: 1;
-    text-align: center;
-}
-
-.column h1 {
-    font-family: 'UnifrakturCook', cursive;
-    font-size: 1.8rem;
-    margin: 0;
-}
-
-.contacto {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    font-size: 0.9rem;
-}
-
-.info-contacto {
-    line-height: 1.3;
-}
-
-.column h5 {
-    font-weight: normal;
-    margin: 0;
-    font-size: 0.9rem;
-}
-*/
 
 /* Responsive - en pantallas pequeñas */
 @media (max-width: 600px) {
@@ -76,11 +26,4 @@ footer {
         text-align: center;
         flex: none;
     }
-/*
-    .contacto {
-        flex-direction: row;
-        justify-content: center;
-        gap: 2px;
-    }
-        */
 }
