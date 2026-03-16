@@ -2,28 +2,32 @@ body {
     margin: 0;
 }
 
+/* CONTENEDOR DEL MENU */
 .menu {
     display: grid;
-    grid-column: repeat(6,1fr);
-    place-items: center;
-    height: 10%;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en ordenador */
+    gap: 10px;
+    padding: 10px;
 }
 
-.menu>img {
+/* IMÁGENES */
+.menu img {
     width: 100%;
     height: 100%;
-    object-fit: initial;
+    object-fit: cover; /* evita deformación */
+    border-radius: 8px;
 }
 
-/* Responsive - en pantallas pequeñas */
-@media (max-width: 600px) {
-    .contenedor {
-        flex-direction: column;
-        gap: 10px;
+/* TABLET */
+@media (max-width: 900px) {
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
-    .column {
-        text-align: center;
-        flex: none;
+/* MOVIL */
+@media (max-width: 500px) {
+    .menu {
+        grid-template-columns: 1fr;
     }
 }
