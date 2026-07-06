@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Cervecería Tramsburgo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="contacto">
+  <main class="app">
+    <div data-layout-header></div>
+
+    <section class="page-header">
+      <div class="eyebrow">Contacto</div>
+      <h1>Estamos cerca de ti.</h1>
+      <p>Consulta la dirección, el horario y abre la ubicación directamente desde el móvil.</p>
+    </section>
+
+    <section aria-labelledby="contacto-titulo">
+      <div class="section-head">
+        <div>
+          <h2 id="contacto-titulo">Datos del bar</h2>
+          <p>Información rápida para clientes.</p>
+        </div>
+      </div>
+
+      <div class="contact-card">
+        <div class="info-row">
+          <span aria-hidden="true">📍</span>
+          <div>
+            <strong>C. de Asín y Palacios, 11, 50009</strong><br />
+            <span class="muted">Zaragoza,Zaragoza</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span aria-hidden="true">🕒</span>
+          <div>
+            <strong data-horario-dia>Lunes a domingo</strong><br />
+            <span class="muted" data-horario-horas>12:00 - 01:00</span><br />
+            <span class="schedule-status" data-horario-estado>Abierto hoy · 12:00 - 01:00</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span aria-hidden="true">☎️</span>
+          <div>
+            <strong>976-965-079</strong><br />
+            <span class="muted">Reservas y consultas rápidas.</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="brand-social-icon" aria-hidden="true">
+            <img src="assets/icon-instagram.svg" alt="" />
+          </span>
+          <div>
+            <a
+              class="social-link"
+              href="https://www.instagram.com/tramsburgo_romareda"
+              target="_blank"
+              rel="noopener"
+            >
+              @tramsburgo_romareda
+            </a><br />
+            <span class="muted">Instagram del bar.</span>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <span class="brand-social-icon" aria-hidden="true">
+            <img src="assets/icon-tiktok.svg" alt="" />
+          </span>
+          <div>
+            <a
+              class="social-link"
+              href="https://www.tiktok.com/@tramsburgo_romareda"
+              target="_blank"
+              rel="noopener"
+            >
+              @tramsburgo_romareda
+            </a><br />
+            <span class="muted">TikTok del bar.</span>
+          </div>
+        </div>
+
+        <div class="map-box">
+          <div class="map-street map-street-a" aria-hidden="true"></div>
+          <div class="map-street map-street-b" aria-hidden="true"></div>
+          <div class="map-street map-street-c" aria-hidden="true"></div>
+          <div class="map-pin" aria-hidden="true"><span>T</span></div>
+          <div class="map-content">
+            <span>Ubicación</span>
+            <strong>C. de Asín y Palacios, 11</strong>
+            <p>Zona Romareda · Zaragoza</p>
+          </div>
+        </div>
+
+        <a
+          class="btn btn-primary"
+          href="https://maps.app.goo.gl/7E3z1btbkHcV1srt8"
+          target="_blank"
+          rel="noopener"
+        >
+          Abrir ubicación
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="reservas-titulo">
+      <div class="simple-card">
+        <h3 id="reservas-titulo">Reservas</h3>
+        <p>Para reservar mesa, llama al teléfono del bar.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-layout-nav></div>
+  <script src="layout.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

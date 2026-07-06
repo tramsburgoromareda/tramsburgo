@@ -1,50 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tramsburgo</title>
-    <link rel="stylesheet" href="css/estilo.css">
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Cervecería Tramsburgo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 
-<body>
-    <header>
-        <!-- POSIBLE MENU-->
-    </header>
-    <main>
-        <div class="menu">
-            <div class="item"><img src="imagenes/Menu1.jpeg" alt=""></div>
-            <div class="item"><img src="imagenes/Menu2.jpeg" alt=""></div>
-            <div class="item"><img src="imagenes/Menu3.jpeg" alt=""></div>
-            <div class="item"><img src="imagenes/Menu4.jpeg" alt=""></div>
-            <div class="item"><img src="imagenes/Bebidas1.jpeg" alt=""></div>
-            <div class="item"><img src="imagenes/Bebidas2.jpeg" alt=""></div>
-        </div>
-    </main>
-    <!--
-    <footer>
-        <div class="contenedor">
-            <div class="column">
-                <h1>Tramsburgo</h1>
-            </div>
-            <div class="column contacto">
-                <a href="https://www.instagram.com/tramsburgo_romareda" target="_blank" rel="noopener noreferrer">
-                    <img src="icono/instagram.png" alt="instagram: tramsburgo_romareda" width="30" class="logo_trams">
-                </a>
-                <div class="info-contacto">
-                    <h3>Contacto</h3>
-                    <p>666666666</p>
-                    <p>C/ Asín y Palacios</p>
-                </div>
-            </div>
-            <div class="column">
-                <h5>© Tramsburgo</h5>
-            </div>
-        </div>
-    </footer>
--->
-</body>
+<body data-page="inicio">
+  <main class="app">
+    <div data-layout-header></div>
 
+    <section class="hero" aria-label="Portada del bar">
+      <div class="hero-content">
+        <div class="eyebrow" data-horario-estado>Abierto hoy · 12:00 - 01:00</div>
+        <h1>Tu bar de siempre, con sabor actual.</h1>
+        <p>Tapas caseras, bebidas frías y el ambiente perfecto para quedar con amigos.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="carta.html">Ver carta</a>
+          <a class="btn btn-secondary" href="contacto.html">Cómo llegar</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="foto-titulo">
+      <div class="section-head">
+        <div>
+          <h2 id="foto-titulo">El local</h2>
+          <p>Una imagen rápida del ambiente del bar.</p>
+        </div>
+      </div>
+
+      <article class="photo-card">
+        <img src="assets/local-tramsburgo.svg" alt="Fachada ilustrada de Cervecería Tramsburgo" />
+        <div class="photo-label">
+          <span>Zona Romareda</span>
+          <strong>Cervecería Tramsburgo</strong>
+          <p>C. de Asín y Palacios, 11 · Zaragoza</p>
+        </div>
+      </article>
+    </section>
+
+    <section aria-labelledby="pedido-titulo">
+      <div class="section-head">
+        <div>
+          <h2 id="pedido-titulo">Lo más pedido</h2>
+          <p>Los favoritos de los clientes.</p>
+        </div>
+      </div>
+
+      <div class="popular-list">
+        <article class="popular-item">
+          <div class="food-icon" aria-hidden="true">
+            <img src="assets/icon-bravas.svg" alt="" />
+          </div>
+          <div>
+            <h3>Bravas de la casa</h3>
+            <p>Crujientes, picantes y perfectas para compartir.</p>
+            <span class="tag">Top ventas</span>
+          </div>
+        </article>
+
+        <article class="popular-item">
+          <div class="food-icon" aria-hidden="true">
+            <img src="assets/icon-burger.svg" alt="" />
+          </div>
+          <div>
+            <h3>Burger del bar</h3>
+            <p>Carne, queso, bacon y salsa especial.</p>
+            <span class="tag">Recomendado</span>
+          </div>
+        </article>
+
+        <article class="popular-item">
+          <div class="food-icon" aria-hidden="true">
+            <img src="assets/icon-beer.svg" alt="" />
+          </div>
+          <div>
+            <h3>Cubo de cervezas</h3>
+            <p>Ideal para grupos y tardes de partido.</p>
+            <span class="tag">Para compartir</span>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <div data-layout-nav></div>
+  <script src="layout.js"></script>
+  <script src="script.js"></script>
+</body>
 </html>
