@@ -14,9 +14,42 @@ const layoutConfig = {
     contacto: "Contacto",
   },
   navegacion: [
-    { id: "inicio", href: "index.html", icono: "🏠", texto: "Inicio" },
-    { id: "carta", href: "carta.html", icono: "🍽️", texto: "Carta" },
-    { id: "contacto", href: "contacto.html", icono: "📍", texto: "Contacto" },
+    {
+      id: "inicio",
+      href: "index.html",
+      icono: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M3 10.5 12 3l9 7.5" />
+          <path d="M5 9.5V21h14V9.5" />
+          <path d="M9 21v-6h6v6" />
+        </svg>
+      `,
+      texto: "Inicio",
+    },
+    {
+      id: "carta",
+      href: "carta.html",
+      icono: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M5 4h14v16H5z" />
+          <path d="M8 8h8" />
+          <path d="M8 12h8" />
+          <path d="M8 16h5" />
+        </svg>
+      `,
+      texto: "Carta",
+    },
+    {
+      id: "contacto",
+      href: "contacto.html",
+      icono: `
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 21s6-5.2 6-11a6 6 0 0 0-12 0c0 5.8 6 11 6 11z" />
+          <path d="M12 12.2a2.2 2.2 0 1 0 0-4.4 2.2 2.2 0 0 0 0 4.4z" />
+        </svg>
+      `,
+      texto: "Contacto",
+    },
   ],
 };
 
