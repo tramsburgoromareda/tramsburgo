@@ -116,4 +116,45 @@ function actualizarHorario() {
   });
 }
 
+function iniciarGaleriaLocal() {
+  const galeria = document.querySelector("[data-gallery]");
+
+  if (!galeria) {
+    return;
+  }
+
+  const fotos = Array.from(galeria.querySelectorAll("[data-gallery-photo]"));
+  const puntos = Array.from(galeria.querySelectorAll("[data-gallery-dot]"));
+  const botonAnterior = galeria.querySelector("[data-gallery-prev]");
+  const botonSiguiente = galeria.querySelector("[data-gallery-next]");
+  let indiceActual = 0;
+
+  function mostrarFoto(indice) {
+    indiceActual = (indice + fotos.length) % fotos.length;
+
+    fotos.forEach((foto, fotoIndice) => {
+      foto.classList.toggle("active", fotoIndice === indiceActual);
+    });
+
+    puntos.forEach((punto, puntoIndice) => {
+      punto.classList.toggle("active", puntoIndice === indiceActual);
+    });
+  }
+
+  botonAnterior?.addEventListener("click", () => {
+    mostrarFoto(indiceActual - 1);
+  });
+
+  botonSiguiente?.addEventListener("click", () => {
+    mostrarFoto(indiceActual + 1);
+  });
+
+  puntos.forEach((punto, indice) => {
+    punto.addEventListener("click", () => {
+      mostrarFoto(indice);
+    });
+  });
+}
+
 actualizarHorario();
+iniciarGaleriaLocal();

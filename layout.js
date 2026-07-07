@@ -1,6 +1,6 @@
 const layoutConfig = {
   nombre: "Cervecería Tramsburgo",
-  inicial: "T",
+  icono: "assets/favicon.png",
   telefono: "976-965-079",
   telefonoHref: "tel:976-965-079",
   subtitulos: {
@@ -30,7 +30,9 @@ function crearHeader(paginaActual) {
   return `
     <header class="topbar">
       <a href="index.html" class="brand" aria-label="Ir al inicio">
-        <div class="brand-mark">${layoutConfig.inicial}</div>
+        <div class="brand-mark">
+          <img src="${layoutConfig.icono}" alt="" />
+        </div>
         <div>
           <strong>${layoutConfig.nombre}</strong>
           <small>${subtitulo}</small>

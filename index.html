@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Inicio | Cervecería Tramsburgo</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
 </head>
 
@@ -31,12 +32,33 @@
         </div>
       </div>
 
-      <article class="photo-card">
-        <img src="assets/local-tramsburgo.svg" alt="Fachada ilustrada de Cervecería Tramsburgo" />
-        <div class="photo-label">
-          <span>Zona Romareda</span>
-          <strong>Cervecería Tramsburgo</strong>
-          <p>C. de Asín y Palacios, 11 · Zaragoza</p>
+      <article class="photo-gallery" data-gallery>
+        <div class="gallery-frame">
+          <img
+            class="gallery-photo active"
+            src="assets/local-galeria-01.png"
+            alt="Barra de Cervecería Tramsburgo con hamburguesas y raciones"
+            data-gallery-photo
+          />
+          <img
+            class="gallery-photo"
+            src="assets/hero-tramsburgo.png"
+            alt="Interior de Cervecería Tramsburgo"
+            data-gallery-photo
+          />
+        </div>
+
+        <div class="gallery-controls" aria-label="Controles de galería">
+          <button class="gallery-button" type="button" aria-label="Foto anterior" data-gallery-prev>
+            &lt;
+          </button>
+          <div class="gallery-dots" aria-label="Fotos disponibles">
+            <button class="gallery-dot active" type="button" aria-label="Ver foto 1" data-gallery-dot></button>
+            <button class="gallery-dot" type="button" aria-label="Ver foto 2" data-gallery-dot></button>
+          </div>
+          <button class="gallery-button" type="button" aria-label="Foto siguiente" data-gallery-next>
+            &gt;
+          </button>
         </div>
       </article>
     </section>
