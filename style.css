@@ -262,6 +262,75 @@ h2 {
   color: #9c3d35;
 }
 
+.schedule-card {
+  gap: 0;
+  overflow: hidden;
+}
+
+.schedule-current {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(74, 30, 37, 0.12);
+}
+
+.schedule-current > span {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff0d2;
+}
+
+.schedule-current strong {
+  color: var(--olive);
+  font-size: 16px;
+}
+
+.schedule-current strong.status-closed {
+  color: #9c3d35;
+}
+
+.schedule-current p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.schedule-list {
+  display: grid;
+}
+
+.schedule-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(74, 30, 37, 0.09);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.schedule-list div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.schedule-list span {
+  font-weight: 750;
+}
+
+.schedule-list strong {
+  color: var(--ink);
+  text-align: right;
+  white-space: nowrap;
+}
+
 .photo-card {
   position: relative;
   border-radius: 12px;
