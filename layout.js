@@ -61,9 +61,9 @@ function crearHeader(paginaActual) {
   const subtitulo = layoutConfig.subtitulos[paginaActual] || layoutConfig.subtitulos.inicio;
 
   return `
-    <header class="topbar">
-      <a href="index.html" class="brand" aria-label="Ir al inicio">
-        <div class="brand-mark">
+    <header class="barra-superior">
+      <a href="index.html" class="marca" aria-label="Ir al inicio">
+        <div class="marca-logo">
           <img src="${layoutConfig.icono}" alt="" />
         </div>
         <div>
@@ -71,7 +71,7 @@ function crearHeader(paginaActual) {
           <small>${subtitulo}</small>
         </div>
       </a>
-      <a class="pill" href="${layoutConfig.telefonoHref}">Llamar</a>
+      <a class="enlace-telefono" href="${layoutConfig.telefonoHref}">Llamar</a>
     </header>
   `;
 }
@@ -79,7 +79,7 @@ function crearHeader(paginaActual) {
 function crearNavegacion(paginaActual) {
   const enlaces = layoutConfig.navegacion
     .map((item) => {
-      const claseActiva = item.id === paginaActual ? ' class="active"' : "";
+      const claseActiva = item.id === paginaActual ? ' class="activo"' : "";
 
       return `
         <a${claseActiva} href="${item.href}">
@@ -90,7 +90,7 @@ function crearNavegacion(paginaActual) {
     })
     .join("");
 
-  return `<nav class="bottom-nav" aria-label="Menú principal">${enlaces}</nav>`;
+  return `<nav class="navegacion-inferior" aria-label="Menú principal">${enlaces}</nav>`;
 }
 
 function cargarLayoutBase() {

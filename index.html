@@ -6,57 +6,58 @@
   <title>Inicio | Cervecería Tramsburgo</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body data-page="inicio">
-  <main class="app">
+  <main class="pagina">
     <div data-layout-header></div>
 
-    <section class="hero" aria-label="Portada del bar">
-      <div class="hero-content">
-        <div class="eyebrow" data-horario-estado>Abierto hoy · 12:00 - 01:00</div>
+    <section class="portada" aria-label="Portada del bar">
+      <div class="contenido-portada">
+        <div class="etiqueta-seccion" data-horario-estado>Abierto hoy · 12:00 - 01:00</div>
         <h1>Tu bar de siempre, con sabor actual.</h1>
         <p>Tapas caseras, bebidas frías y el ambiente perfecto para quedar con amigos.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="carta.html">Ver carta</a>
-          <a class="btn btn-secondary" href="contacto.html">Cómo llegar</a>
+        <div class="acciones-portada">
+          <a class="btn boton-principal" href="carta.html">Ver carta</a>
+          <a class="btn boton-secundario" href="contacto.html">Cómo llegar</a>
         </div>
       </div>
     </section>
 
     <section aria-labelledby="foto-titulo">
-      <div class="section-head">
+      <div class="cabecera-seccion">
         <div>
           <h2 id="foto-titulo">El local</h2>
           <p>Una imagen rápida del ambiente del bar.</p>
         </div>
       </div>
 
-      <article class="photo-gallery" data-gallery>
-        <div class="gallery-frame">
+      <article class="galeria-local" data-gallery>
+        <div class="marco-galeria">
           <img
-            class="gallery-photo active"
+            class="foto-galeria activo"
             src="assets/local-galeria-01.png"
             alt="Barra de Cervecería Tramsburgo con hamburguesas y raciones"
-            data-gallery-photo
+            data-foto-galeria
           />
           <img
-            class="gallery-photo"
+            class="foto-galeria"
             src="assets/hero-tramsburgo.png"
             alt="Interior de Cervecería Tramsburgo"
-            data-gallery-photo
+            data-foto-galeria
           />
         </div>
 
-        <div class="gallery-controls" aria-label="Controles de galería">
-          <button class="gallery-button" type="button" aria-label="Foto anterior" data-gallery-prev>
+        <div class="controles-galeria" aria-label="Controles de galería">
+          <button class="boton-galeria" type="button" aria-label="Foto anterior" data-gallery-prev>
             &lt;
           </button>
-          <div class="gallery-dots" aria-label="Fotos disponibles">
-            <button class="gallery-dot active" type="button" aria-label="Ver foto 1" data-gallery-dot></button>
-            <button class="gallery-dot" type="button" aria-label="Ver foto 2" data-gallery-dot></button>
+          <div class="puntos-galeria" aria-label="Fotos disponibles">
+            <button class="punto-galeria activo" type="button" aria-label="Ver foto 1" data-punto-galeria></button>
+            <button class="punto-galeria" type="button" aria-label="Ver foto 2" data-punto-galeria></button>
           </div>
-          <button class="gallery-button" type="button" aria-label="Foto siguiente" data-gallery-next>
+          <button class="boton-galeria" type="button" aria-label="Foto siguiente" data-gallery-next>
             &gt;
           </button>
         </div>
@@ -64,44 +65,44 @@
     </section>
 
     <section aria-labelledby="pedido-titulo">
-      <div class="section-head">
+      <div class="cabecera-seccion">
         <div>
           <h2 id="pedido-titulo">Lo más pedido</h2>
           <p>Los favoritos de los clientes.</p>
         </div>
       </div>
 
-      <div class="popular-list">
-        <article class="popular-item">
-          <div class="food-icon" aria-hidden="true">
+      <div class="lista-destacados">
+        <article class="producto-destacado">
+          <div class="icono-producto" aria-hidden="true">
             <img src="assets/icon-bravas.svg" alt="" />
           </div>
           <div>
             <h3>Bravas de la casa</h3>
             <p>Crujientes, picantes y perfectas para compartir.</p>
-            <span class="tag">Top ventas</span>
+            <span class="etiqueta-destacado">Top ventas</span>
           </div>
         </article>
 
-        <article class="popular-item">
-          <div class="food-icon" aria-hidden="true">
+        <article class="producto-destacado">
+          <div class="icono-producto" aria-hidden="true">
             <img src="assets/icon-burger.svg" alt="" />
           </div>
           <div>
             <h3>Burger del bar</h3>
             <p>Carne, queso, bacon y salsa especial.</p>
-            <span class="tag">Recomendado</span>
+            <span class="etiqueta-destacado">Recomendado</span>
           </div>
         </article>
 
-        <article class="popular-item">
-          <div class="food-icon" aria-hidden="true">
+        <article class="producto-destacado">
+          <div class="icono-producto" aria-hidden="true">
             <img src="assets/icon-beer.svg" alt="" />
           </div>
           <div>
             <h3>Cubo de cervezas</h3>
             <p>Ideal para grupos y tardes de partido.</p>
-            <span class="tag">Para compartir</span>
+            <span class="etiqueta-destacado">Para compartir</span>
           </div>
         </article>
       </div>

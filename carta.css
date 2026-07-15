@@ -1,0 +1,84 @@
+/* Contenedor de las páginas de la carta en imagen. */
+.imagenes-carta {
+  display: grid;
+  gap: 18px;
+}
+
+/* Enlaces superiores para saltar a cada sección de la carta. */
+.navegacion-carta {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  scrollbar-width: none;
+}
+
+.navegacion-carta::-webkit-scrollbar {
+  display: none;
+}
+
+.navegacion-carta a {
+  flex: 0 0 auto;
+  padding: 9px 12px;
+  border: 1px solid rgba(74, 30, 37, 0.20);
+  border-radius: 999px;
+  background: rgba(255, 244, 223, 0.72);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Tarjeta de cada página de la carta y su cabecera. */
+.pagina-carta {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #e4d2b7;
+  box-shadow: var(--shadow);
+}
+
+.cabecera-carta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 13px 14px;
+  background: linear-gradient(180deg, #4a1e25, #32151a);
+  color: #fff0d2;
+}
+
+.cabecera-carta span {
+  display: block;
+  margin-bottom: 3px;
+  color: #d8b47a;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.cabecera-carta h3 {
+  font-size: 16px;
+  line-height: 1.15;
+}
+
+.cabecera-carta a {
+  flex: 0 0 auto;
+  padding: 8px 10px;
+  border: 1px solid rgba(255, 244, 223, 0.22);
+  border-radius: 999px;
+  color: #f5e5c8;
+  font-size: 12px;
+  font-weight: 850;
+  white-space: nowrap;
+}
+
+.enlace-carta {
+  display: block;
+}
+
+.pagina-carta img {
+  width: 100%;
+  height: auto;
+}

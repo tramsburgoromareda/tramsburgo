@@ -6,28 +6,29 @@
   <title>Contacto | Cervecería Tramsburgo</title>
   <link rel="icon" type="image/png" href="assets/favicon.png" />
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="contacto.css" />
 </head>
 
 <body data-page="contacto">
-  <main class="app">
+  <main class="pagina">
     <div data-layout-header></div>
 
-    <section class="page-header">
-      <div class="eyebrow">Contacto</div>
+    <section class="cabecera-pagina">
+      <div class="etiqueta-seccion">Contacto</div>
       <h1>Estamos cerca de ti.</h1>
       <p>Consulta la dirección, el horario y abre la ubicación directamente desde el móvil.</p>
     </section>
 
     <section aria-labelledby="contacto-titulo">
-      <div class="section-head">
+      <div class="cabecera-seccion">
         <div>
           <h2 id="contacto-titulo">Datos del bar</h2>
           <p>Información rápida para clientes.</p>
         </div>
       </div>
 
-      <div class="contact-card">
-        <div class="info-row">
+      <div class="tarjeta-contacto">
+        <div class="fila-contacto">
           <span aria-hidden="true">📍</span>
           <div>
             <strong>C. de Asín y Palacios, 11, 50009</strong><br />
@@ -35,7 +36,7 @@
           </div>
         </div>
 
-        <div class="info-row">
+        <div class="fila-contacto">
           <span aria-hidden="true">☎️</span>
           <div>
             <strong>976-965-079</strong><br />
@@ -43,12 +44,12 @@
           </div>
         </div>
 
-        <div class="map-box">
-          <div class="map-street map-street-a" aria-hidden="true"></div>
-          <div class="map-street map-street-b" aria-hidden="true"></div>
-          <div class="map-street map-street-c" aria-hidden="true"></div>
-          <div class="map-pin" aria-hidden="true"><span>T</span></div>
-          <div class="map-content">
+        <div class="mapa-ubicacion">
+          <div class="calle-mapa calle-mapa-a" aria-hidden="true"></div>
+          <div class="calle-mapa calle-mapa-b" aria-hidden="true"></div>
+          <div class="calle-mapa calle-mapa-c" aria-hidden="true"></div>
+          <div class="marcador-mapa" aria-hidden="true"><span>T</span></div>
+          <div class="contenido-mapa">
             <span>Ubicación</span>
             <strong>C. de Asín y Palacios, 11</strong>
             <p>Zona Romareda · Zaragoza</p>
@@ -56,7 +57,7 @@
         </div>
 
         <a
-          class="btn btn-primary"
+          class="btn boton-principal"
           href="https://maps.app.goo.gl/7E3z1btbkHcV1srt8"
           target="_blank"
           rel="noopener"
@@ -67,15 +68,15 @@
     </section>
 
     <section aria-labelledby="horario-titulo">
-      <div class="section-head">
+      <div class="cabecera-seccion">
         <div>
           <h2 id="horario-titulo">Horario</h2>
           <p>Consulta si estamos abiertos antes de venir.</p>
         </div>
       </div>
 
-      <div class="contact-card schedule-card">
-        <div class="schedule-current">
+      <div class="tarjeta-contacto tarjeta-horario">
+        <div class="horario-actual">
           <span aria-hidden="true">🕒</span>
           <div>
             <strong data-horario-estado>Abierto ahora · hasta 23:00</strong>
@@ -83,7 +84,7 @@
           </div>
         </div>
 
-        <div class="schedule-list" aria-label="Horario semanal">
+        <div class="lista-horario" aria-label="Horario semanal">
           <div><span>Lunes</span><strong>09:00 - 23:00</strong></div>
           <div><span>Martes</span><strong>09:00 - 23:00</strong></div>
           <div><span>Miércoles</span><strong>Cerrado</strong></div>
@@ -96,16 +97,16 @@
     </section>
 
     <section aria-labelledby="redes-titulo">
-      <div class="section-head">
+      <div class="cabecera-seccion">
         <div>
           <h2 id="redes-titulo">Redes sociales</h2>
           <p>Sigue las novedades y publicaciones del bar.</p>
         </div>
       </div>
 
-      <div class="contact-card social-card">
+      <div class="tarjeta-contacto tarjeta-redes">
         <a
-          class="social-icon-link"
+          class="enlace-red"
           href="https://www.instagram.com/tramsburgo_romareda"
           target="_blank"
           rel="noopener"
@@ -115,7 +116,7 @@
         </a>
 
         <a
-          class="social-icon-link"
+          class="enlace-red"
           href="https://www.tiktok.com/@tramsburgo_romareda"
           target="_blank"
           rel="noopener"
@@ -127,7 +128,7 @@
     </section>
 
     <section aria-labelledby="reservas-titulo">
-      <div class="simple-card">
+      <div class="tarjeta-simple">
         <h3 id="reservas-titulo">Reservas</h3>
         <p>Para reservar mesa, llama al teléfono del bar.</p>
       </div>

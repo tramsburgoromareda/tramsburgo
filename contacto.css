@@ -1,0 +1,274 @@
+/* Tarjetas base usadas en la vista de contacto. */
+.tarjeta-contacto,
+.tarjeta-simple {
+  border: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--card), var(--card-2));
+  border-radius: var(--radius);
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+.tarjeta-contacto {
+  display: grid;
+  gap: 14px;
+}
+
+.tarjeta-simple h3 {
+  font-size: 17px;
+  margin-bottom: 5px;
+}
+
+.tarjeta-simple p {
+  color: var(--muted);
+  font-size: 13.5px;
+  line-height: 1.38;
+}
+
+/* Bloque de horario: estado actual y listado semanal. */
+.tarjeta-horario {
+  gap: 0;
+  overflow: hidden;
+}
+
+.horario-actual {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(74, 30, 37, 0.12);
+}
+
+.horario-actual > span {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff0d2;
+}
+
+.horario-actual strong {
+  color: var(--olive);
+  font-size: 16px;
+}
+
+.horario-actual strong.estado-cerrado {
+  color: #9c3d35;
+}
+
+.horario-actual p {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.35;
+}
+
+.lista-horario {
+  display: grid;
+}
+
+.lista-horario div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(74, 30, 37, 0.09);
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.lista-horario div:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.lista-horario span {
+  font-weight: 750;
+}
+
+.lista-horario strong {
+  color: var(--ink);
+  text-align: right;
+  white-space: nowrap;
+}
+
+/* Filas con icono y datos breves del bar. */
+.fila-contacto {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.35;
+}
+
+.fila-contacto span:first-child {
+  width: 34px;
+  height: 34px;
+  flex: 0 0 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: rgba(74, 30, 37, 0.08);
+  color: var(--accent);
+}
+
+/* Enlaces de redes sociales mostrados solo con icono. */
+.tarjeta-redes {
+  grid-template-columns: repeat(2, 72px);
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
+}
+
+.enlace-red {
+  width: 72px;
+  height: 72px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(74, 30, 37, 0.14);
+  border-radius: 8px;
+  background: rgba(255, 244, 223, 0.58);
+  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+}
+
+.enlace-red img {
+  width: 34px;
+  height: 34px;
+}
+
+.enlace-red:hover,
+.enlace-red:focus {
+  background: rgba(255, 244, 223, 0.86);
+  border-color: rgba(74, 30, 37, 0.28);
+  outline: none;
+  transform: translateY(-2px);
+}
+
+/* Mapa ilustrado de ubicación dentro de la tarjeta de contacto. */
+.mapa-ubicacion {
+  position: relative;
+  overflow: hidden;
+  min-height: 190px;
+  border-radius: 8px;
+  border: 1px solid rgba(74, 30, 37, 0.18);
+  background:
+    linear-gradient(90deg, rgba(74, 30, 37, 0.08) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(74, 30, 37, 0.07) 1px, transparent 1px),
+    linear-gradient(135deg, #f6e8cf, #dfc79f);
+  background-size: 34px 34px, 34px 34px, auto;
+  display: flex;
+  align-items: flex-end;
+  padding: 20px;
+  color: var(--muted);
+}
+
+.mapa-ubicacion::before {
+  content: "";
+  position: absolute;
+  inset: 22px -20px auto;
+  height: 42px;
+  background: rgba(255, 244, 223, 0.62);
+  border: 1px solid rgba(74, 30, 37, 0.10);
+  transform: rotate(-12deg);
+}
+
+.mapa-ubicacion::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  bottom: 34px;
+  width: 68%;
+  height: 24px;
+  border-top: 6px solid rgba(95, 107, 69, 0.42);
+  border-radius: 999px;
+  transform: rotate(18deg);
+}
+
+.calle-mapa {
+  position: absolute;
+  background: rgba(255, 244, 223, 0.62);
+  border: 1px solid rgba(74, 30, 37, 0.10);
+}
+
+.calle-mapa-a {
+  left: 14px;
+  top: 92px;
+  width: 72%;
+  height: 32px;
+  transform: rotate(22deg);
+}
+
+.calle-mapa-b {
+  right: 28px;
+  top: 0;
+  width: 30px;
+  height: 100%;
+  transform: rotate(12deg);
+}
+
+.calle-mapa-c {
+  left: -18px;
+  bottom: 36px;
+  width: 58%;
+  height: 26px;
+  transform: rotate(-18deg);
+}
+
+.marcador-mapa {
+  position: absolute;
+  top: 58px;
+  left: 50%;
+  z-index: 2;
+  width: 48px;
+  height: 48px;
+  display: grid;
+  place-items: center;
+  border: 3px solid #fff4df;
+  border-radius: 50% 50% 50% 8px;
+  background: var(--accent);
+  color: #fff0d2;
+  font-size: 22px;
+  font-weight: 900;
+  box-shadow: 0 16px 28px rgba(74, 30, 37, 0.24);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.marcador-mapa span {
+  transform: rotate(45deg);
+}
+
+.contenido-mapa {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  padding: 14px;
+  border: 1px solid rgba(74, 30, 37, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 244, 223, 0.86);
+  backdrop-filter: blur(10px);
+  color: var(--muted);
+}
+
+.contenido-mapa span {
+  display: block;
+  margin-bottom: 4px;
+  color: var(--olive);
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contenido-mapa strong {
+  color: var(--text);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.contenido-mapa p {
+  font-size: 14px;
+  line-height: 1.35;
+}
