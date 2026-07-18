@@ -103,8 +103,8 @@ function actualizarHorario() {
 
   estadoElementos.forEach((elemento) => {
     elemento.textContent = estado.textoEstado;
-    elemento.classList.toggle("status-open", estado.abierto);
-    elemento.classList.toggle("status-closed", !estado.abierto);
+    elemento.classList.toggle("estado-abierto", estado.abierto);
+    elemento.classList.toggle("estado-cerrado", !estado.abierto);
   });
 
   diaElementos.forEach((elemento) => {
@@ -123,8 +123,8 @@ function iniciarGaleriaLocal() {
     return;
   }
 
-  const fotos = Array.from(galeria.querySelectorAll("[data-gallery-photo]"));
-  const puntos = Array.from(galeria.querySelectorAll("[data-gallery-dot]"));
+  const fotos = Array.from(galeria.querySelectorAll("[data-foto-galeria]"));
+  const puntos = Array.from(galeria.querySelectorAll("[data-punto-galeria]"));
   const botonAnterior = galeria.querySelector("[data-gallery-prev]");
   const botonSiguiente = galeria.querySelector("[data-gallery-next]");
   let indiceActual = 0;
@@ -133,11 +133,11 @@ function iniciarGaleriaLocal() {
     indiceActual = (indice + fotos.length) % fotos.length;
 
     fotos.forEach((foto, fotoIndice) => {
-      foto.classList.toggle("active", fotoIndice === indiceActual);
+      foto.classList.toggle("activo", fotoIndice === indiceActual);
     });
 
     puntos.forEach((punto, puntoIndice) => {
-      punto.classList.toggle("active", puntoIndice === indiceActual);
+      punto.classList.toggle("activo", puntoIndice === indiceActual);
     });
   }
 
