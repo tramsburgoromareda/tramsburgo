@@ -1,0 +1,34 @@
+---
+import Header from "../components/Header.astro";
+import BottomNav from "../components/BottomNav.astro";
+import "../styles/global.css";
+
+const {
+  title,
+  page = "inicio",
+  subtitle = "Tapas · Copas · Buen ambiente",
+} = Astro.props;
+
+const pageTitle = `${title} | Cervecería Tramsburgo`;
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cervecería Tramsburgo en Zaragoza: tapas, carta, horario, contacto y ubicación." />
+    <title>{pageTitle}</title>
+    <link rel="icon" type="image/png" href={`${baseUrl}assets/favicon.png`} />
+  </head>
+  <body data-page={page}>
+    <main class="pagina">
+      <Header subtitle={subtitle} />
+      <slot />
+    </main>
+
+    <BottomNav page={page} />
+    <script src={`${baseUrl}scripts/site.js`} defer></script>
+  </body>
+</html>

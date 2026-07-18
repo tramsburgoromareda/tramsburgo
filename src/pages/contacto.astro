@@ -1,0 +1,129 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/contacto.css";
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Contacto" page="contacto" subtitle="Contacto y ubicación">
+  <section class="cabecera-pagina">
+    <div class="etiqueta-seccion">Contacto</div>
+    <h1>Estamos cerca de ti.</h1>
+    <p>Consulta la dirección, el horario y abre la ubicación directamente desde el móvil.</p>
+  </section>
+
+  <section aria-labelledby="contacto-titulo">
+    <div class="cabecera-seccion">
+      <div>
+        <h2 id="contacto-titulo">Datos del bar</h2>
+        <p>Información rápida para clientes.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-contacto">
+      <div class="fila-contacto">
+        <span aria-hidden="true">📍</span>
+        <div>
+          <strong>C. de Asín y Palacios, 11, 50009</strong><br />
+          <span class="muted">Zaragoza,Zaragoza</span>
+        </div>
+      </div>
+
+      <div class="fila-contacto">
+        <span aria-hidden="true">☎️</span>
+        <div>
+          <strong>976-965-079</strong><br />
+          <span class="muted">Reservas y consultas rápidas.</span>
+        </div>
+      </div>
+
+      <div class="mapa-ubicacion">
+        <div class="calle-mapa calle-mapa-a" aria-hidden="true"></div>
+        <div class="calle-mapa calle-mapa-b" aria-hidden="true"></div>
+        <div class="calle-mapa calle-mapa-c" aria-hidden="true"></div>
+        <div class="marcador-mapa" aria-hidden="true"><span>T</span></div>
+        <div class="contenido-mapa">
+          <span>Ubicación</span>
+          <strong>C. de Asín y Palacios, 11</strong>
+          <p>Zona Romareda · Zaragoza</p>
+        </div>
+      </div>
+
+      <a
+        class="btn boton-principal"
+        href="https://maps.app.goo.gl/7E3z1btbkHcV1srt8"
+        target="_blank"
+        rel="noopener"
+      >
+        Abrir ubicación
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="horario-titulo">
+    <div class="cabecera-seccion">
+      <div>
+        <h2 id="horario-titulo">Horario</h2>
+        <p>Consulta si estamos abiertos antes de venir.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-contacto tarjeta-horario">
+      <div class="horario-actual">
+        <span aria-hidden="true">🕒</span>
+        <div>
+          <strong data-horario-estado>Abierto ahora · hasta 23:00</strong>
+          <p><span data-horario-dia>Hoy</span> · <span data-horario-horas>09:00 - 23:00</span></p>
+        </div>
+      </div>
+
+      <div class="lista-horario" aria-label="Horario semanal">
+        <div><span>Lunes</span><strong>09:00 - 23:00</strong></div>
+        <div><span>Martes</span><strong>09:00 - 23:00</strong></div>
+        <div><span>Miércoles</span><strong>Cerrado</strong></div>
+        <div><span>Jueves</span><strong>09:00 - 23:00</strong></div>
+        <div><span>Viernes</span><strong>09:00 - 23:00</strong></div>
+        <div><span>Sábado</span><strong>09:00 - 23:00</strong></div>
+        <div><span>Domingo</span><strong>09:00 - 23:00</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="redes-titulo">
+    <div class="cabecera-seccion">
+      <div>
+        <h2 id="redes-titulo">Redes sociales</h2>
+        <p>Sigue las novedades y publicaciones del bar.</p>
+      </div>
+    </div>
+
+    <div class="tarjeta-contacto tarjeta-redes">
+      <a
+        class="enlace-red"
+        href="https://www.instagram.com/tramsburgo_romareda"
+        target="_blank"
+        rel="noopener"
+        aria-label="Instagram de Cervecería Tramsburgo"
+      >
+        <img src={`${baseUrl}assets/icon-instagram.svg`} alt="" />
+      </a>
+
+      <a
+        class="enlace-red"
+        href="https://www.tiktok.com/@tramsburgo_romareda"
+        target="_blank"
+        rel="noopener"
+        aria-label="TikTok de Cervecería Tramsburgo"
+      >
+        <img src={`${baseUrl}assets/icon-tiktok.svg`} alt="" />
+      </a>
+    </div>
+  </section>
+
+  <section aria-labelledby="reservas-titulo">
+    <div class="tarjeta-simple">
+      <h3 id="reservas-titulo">Reservas</h3>
+      <p>Para reservar mesa, llama al teléfono del bar.</p>
+    </div>
+  </section>
+</BaseLayout>

@@ -5,7 +5,7 @@
   border-radius: 12px;
   background:
     linear-gradient(rgba(44, 18, 16, 0.10), rgba(44, 18, 16, 0.66)),
-    url("assets/hero-tramsburgo.png") center 16% / cover;
+    var(--imagen-portada) center 16% / cover;
   min-height: 560px;
   display: flex;
   flex-direction: column;
@@ -48,7 +48,7 @@
   gap: 10px;
 }
 
-/* Galería manual de fotos del local. La clase .activo la gestiona script.js. */
+/* Galería manual de fotos del local. La clase .activo la gestiona site.js. */
 .galeria-local {
   display: grid;
   gap: 12px;

@@ -1,0 +1,103 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/index.css";
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Inicio" page="inicio" subtitle="Tapas · Copas · Buen ambiente">
+  <section class="portada" style={`--imagen-portada: url("${baseUrl}assets/hero-tramsburgo.png")`} aria-label="Portada del bar">
+    <div class="contenido-portada">
+      <div class="etiqueta-seccion" data-horario-estado>Abierto hoy · 12:00 - 01:00</div>
+      <h1>Tu bar de siempre, con sabor actual.</h1>
+      <p>Tapas caseras, bebidas frías y el ambiente perfecto para quedar con amigos.</p>
+      <div class="acciones-portada">
+        <a class="btn boton-principal" href={`${baseUrl}carta/`}>Ver carta</a>
+        <a class="btn boton-secundario" href={`${baseUrl}contacto/`}>Cómo llegar</a>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="foto-titulo">
+    <div class="cabecera-seccion">
+      <div>
+        <h2 id="foto-titulo">El local</h2>
+        <p>Una imagen rápida del ambiente del bar.</p>
+      </div>
+    </div>
+
+    <article class="galeria-local" data-gallery>
+      <div class="marco-galeria">
+        <img
+          class="foto-galeria activo"
+          src={`${baseUrl}assets/local-galeria-01.png`}
+          alt="Barra de Cervecería Tramsburgo con hamburguesas y raciones"
+          data-foto-galeria
+        />
+        <img
+          class="foto-galeria"
+          src={`${baseUrl}assets/hero-tramsburgo.png`}
+          alt="Interior de Cervecería Tramsburgo"
+          data-foto-galeria
+        />
+      </div>
+
+      <div class="controles-galeria" aria-label="Controles de galería">
+        <button class="boton-galeria" type="button" aria-label="Foto anterior" data-gallery-prev>
+          &lt;
+        </button>
+        <div class="puntos-galeria" aria-label="Fotos disponibles">
+          <button class="punto-galeria activo" type="button" aria-label="Ver foto 1" data-punto-galeria></button>
+          <button class="punto-galeria" type="button" aria-label="Ver foto 2" data-punto-galeria></button>
+        </div>
+        <button class="boton-galeria" type="button" aria-label="Foto siguiente" data-gallery-next>
+          &gt;
+        </button>
+      </div>
+    </article>
+  </section>
+
+  <section aria-labelledby="pedido-titulo">
+    <div class="cabecera-seccion">
+      <div>
+        <h2 id="pedido-titulo">Lo más pedido</h2>
+        <p>Los favoritos de los clientes.</p>
+      </div>
+    </div>
+
+    <div class="lista-destacados">
+      <article class="producto-destacado">
+        <div class="icono-producto" aria-hidden="true">
+          <img src={`${baseUrl}assets/icon-bravas.svg`} alt="" />
+        </div>
+        <div>
+          <h3>Bravas de la casa</h3>
+          <p>Crujientes, picantes y perfectas para compartir.</p>
+          <span class="etiqueta-destacado">Top ventas</span>
+        </div>
+      </article>
+
+      <article class="producto-destacado">
+        <div class="icono-producto" aria-hidden="true">
+          <img src={`${baseUrl}assets/icon-burger.svg`} alt="" />
+        </div>
+        <div>
+          <h3>Burger del bar</h3>
+          <p>Carne, queso, bacon y salsa especial.</p>
+          <span class="etiqueta-destacado">Recomendado</span>
+        </div>
+      </article>
+
+      <article class="producto-destacado">
+        <div class="icono-producto" aria-hidden="true">
+          <img src={`${baseUrl}assets/icon-beer.svg`} alt="" />
+        </div>
+        <div>
+          <h3>Cubo de cervezas</h3>
+          <p>Ideal para grupos y tardes de partido.</p>
+          <span class="etiqueta-destacado">Para compartir</span>
+        </div>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
