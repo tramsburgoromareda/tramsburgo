@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - Migracion_Web_Astro
   workflow_dispatch:
 
 permissions:
