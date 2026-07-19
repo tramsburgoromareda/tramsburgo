@@ -2,6 +2,6 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
   site: "https://tramsburgoromareda.github.io",
-  base: "/tramsburgo",
+  base: "/tramsburgo/",
   output: "static",
 });
