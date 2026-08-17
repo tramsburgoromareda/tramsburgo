@@ -133,7 +133,17 @@ function iniciarGaleriaLocal() {
     indiceActual = (indice + fotos.length) % fotos.length;
 
     fotos.forEach((foto, fotoIndice) => {
-      foto.classList.toggle("activo", fotoIndice === indiceActual);
+      const estaActiva = fotoIndice === indiceActual;
+
+      foto.classList.toggle("activo", estaActiva);
+
+      if (foto.tagName === "VIDEO") {
+        if (estaActiva) {
+          foto.play().catch(() => {});
+        } else {
+          foto.pause();
+        }
+      }
     });
 
     puntos.forEach((punto, puntoIndice) => {
