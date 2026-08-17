@@ -82,3 +82,71 @@
   width: 100%;
   height: auto;
 }
+
+/* Pantalla previa para elegir qué parte de la carta consultar. */
+.opciones-carta {
+  display: grid;
+  gap: 12px;
+}
+
+.opcion-carta {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  min-height: 88px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, var(--card), var(--card-2));
+  box-shadow: var(--shadow);
+}
+
+.opcion-carta:hover,
+.opcion-carta:focus {
+  border-color: var(--accent);
+  background: #fff0d2;
+  outline: none;
+}
+
+.icono-opcion {
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: var(--accent);
+  color: #fff0d2;
+}
+
+.icono-opcion svg {
+  width: 30px;
+  height: 30px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.opcion-carta strong,
+.opcion-carta small {
+  display: block;
+}
+
+.opcion-carta strong {
+  color: var(--ink);
+  font-size: 17px;
+}
+
+.opcion-carta small {
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 12.5px;
+  line-height: 1.35;
+}
+
+.opcion-carta > b {
+  color: var(--accent);
+  font-size: 22px;
+}

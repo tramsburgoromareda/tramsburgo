@@ -1,0 +1,66 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/carta.css";
+
+const baseUrl = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Carta" page="carta" subtitle="Carta del bar">
+  <section class="cabecera-pagina">
+    <div class="etiqueta-seccion">Carta</div>
+    <h1>¿Qué te apetece?</h1>
+    <p>Elige una opción para consultar la parte de la carta que buscas.</p>
+  </section>
+
+  <section aria-labelledby="opciones-carta-titulo">
+    <div class="cabecera-seccion">
+      <div>
+        <h2 id="opciones-carta-titulo">Nuestras cartas</h2>
+        <p>Pulsa para ver cada sección.</p>
+      </div>
+    </div>
+
+    <div class="opciones-carta">
+      <a class="opcion-carta" href={`${baseUrl}carta/#tapas`}>
+        <span class="icono-opcion" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 4h14v16H5z" />
+            <path d="M8 8h8M8 12h8M8 16h5" />
+          </svg>
+        </span>
+        <span>
+          <strong>Comidas y cenas</strong>
+          <small>Raciones, tapas, ensaladas y bocadillos</small>
+        </span>
+        <b aria-hidden="true">→</b>
+      </a>
+
+      <a class="opcion-carta" href={`${baseUrl}carta/#desayunos`}>
+        <span class="icono-opcion" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M5 8h12v8a4 4 0 0 1-4 4H9a4 4 0 0 1-4-4V8z" />
+            <path d="M17 10h1a3 3 0 0 1 0 6h-1M8 4v2M12 3v3" />
+          </svg>
+        </span>
+        <span>
+          <strong>Desayunos</strong>
+          <small>Cafés, tortillas, sándwiches y platos rápidos</small>
+        </span>
+        <b aria-hidden="true">→</b>
+      </a>
+
+      <a class="opcion-carta" href={`${baseUrl}carta/#bebidas`}>
+        <span class="icono-opcion" aria-hidden="true">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 3h12l-1 7a5 5 0 0 1-10 0L6 3zM12 15v5M8 21h8" />
+          </svg>
+        </span>
+        <span>
+          <strong>Cócteles</strong>
+          <small>Cócteles, refrescos, zumos y otras bebidas</small>
+        </span>
+        <b aria-hidden="true">→</b>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
