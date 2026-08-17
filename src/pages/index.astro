@@ -28,8 +28,20 @@ const baseUrl = import.meta.env.BASE_URL;
 
     <article class="galeria-local" data-gallery>
       <div class="marco-galeria">
+        <video
+          class="foto-galeria video-galeria activo"
+          src={`${baseUrl}assets/tramsburgo_zoom_final.mp4`}
+          poster={`${baseUrl}assets/local-galeria-01.png`}
+          autoplay
+          muted
+          loop
+          playsinline
+          preload="auto"
+          aria-label="Vídeo del interior de Cervecería Tramsburgo"
+          data-foto-galeria
+        ></video>
         <img
-          class="foto-galeria activo"
+          class="foto-galeria"
           src={`${baseUrl}assets/local-galeria-01.png`}
           alt="Barra de Cervecería Tramsburgo con hamburguesas y raciones"
           data-foto-galeria
@@ -47,7 +59,8 @@ const baseUrl = import.meta.env.BASE_URL;
           &lt;
         </button>
         <div class="puntos-galeria" aria-label="Fotos disponibles">
-          <button class="punto-galeria activo" type="button" aria-label="Ver foto 1" data-punto-galeria></button>
+          <button class="punto-galeria activo" type="button" aria-label="Ver vídeo" data-punto-galeria></button>
+          <button class="punto-galeria" type="button" aria-label="Ver foto 1" data-punto-galeria></button>
           <button class="punto-galeria" type="button" aria-label="Ver foto 2" data-punto-galeria></button>
         </div>
         <button class="boton-galeria" type="button" aria-label="Foto siguiente" data-gallery-next>
